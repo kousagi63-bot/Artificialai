@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sign Up | Stackly</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<section class="auth-section">
+
+<div class="auth-container">
+
+<div class="auth-logo">
+<a href="index.html">Stackly</a>
+</div>
+
+<h1 class="auth-title">
+Create Account
+</h1>
+
+<p class="auth-subtitle">
+Start your AI journey today
+</p>
+
+<form class="auth-form" id="signupForm">
+
+<input
+type="text"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+placeholder="Email Address"
+required>
+
+<input
+type="tel"
+placeholder="Mobile Number"
+required>
+
+<div class="password-box">
+
+<input
+type="password"
+id="signupPassword"
+placeholder="Create Password"
+required>
+
+<span
+class="password-toggle"
+id="toggleSignupPassword">
+
+🙈
+
+</span>
+
+</div>
+
+<div class="password-box">
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm Password"
+required>
+
+<span
+class="password-toggle"
+id="toggleConfirmPassword">
+
+🙈
+
+</span>
+
+</div>
+
+<label style="display:flex;align-items:flex-start;gap:10px;color:#7a9a8a;margin:15px 0;">
+
+<input type="checkbox" required>
+
+<span>
+I agree to the Terms & Conditions and Privacy Policy
+</span>
+
+</label>
+
+<button
+type="submit"
+class="btn-primary auth-btn">
+
+Create Account
+
+</button>
+
+</form>
+
+<div class="auth-divider">
+
+<span>OR</span>
+
+</div>
+
+<div class="social-login">
+
+<a href="404.html"
+class="social-btn">
+
+<i class="fab fa-google"></i>
+
+ Google
+
+</a>
+
+<a href="404.html"
+class="social-btn">
+
+<i class="fab fa-github"></i>
+
+ GitHub
+
+</a>
+
+</div>
+
+<div class="auth-footer">
+
+Already have an account?
+
+<a href="login.html">
+
+Login Now
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+/* ==========================
+PASSWORD TOGGLE
+========================== */
+
+const signupPassword =
+document.getElementById("signupPassword");
+
+const confirmPassword =
+document.getElementById("confirmPassword");
+
+const toggleSignupPassword =
+document.getElementById("toggleSignupPassword");
+
+const toggleConfirmPassword =
+document.getElementById("toggleConfirmPassword");
+
+toggleSignupPassword.addEventListener(
+"click",
+() => {
+
+if(signupPassword.type === "password"){
+
+signupPassword.type = "text";
+toggleSignupPassword.innerHTML = "👁️";
+
+}else{
+
+signupPassword.type = "password";
+toggleSignupPassword.innerHTML = "🙈";
+
+}
+
+}
+);
+
+toggleConfirmPassword.addEventListener(
+"click",
+() => {
+
+if(confirmPassword.type === "password"){
+
+confirmPassword.type = "text";
+toggleConfirmPassword.innerHTML = "👁️";
+
+}else{
+
+confirmPassword.type = "password";
+toggleConfirmPassword.innerHTML = "🙈";
+
+}
+
+}
+);
+
+/* ==========================
+SIGNUP VALIDATION
+========================== */
+
+document
+.getElementById("signupForm")
+.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+if(
+signupPassword.value !==
+confirmPassword.value
+){
+
+alert(
+"Passwords do not match!"
+);
+
+return;
+
+}
+
+alert(
+"Account Created Successfully!"
+);
+
+window.location.href =
+"dashboard.html";
+
+}
+);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stackly - Future of Artificial Intelligence</title>
+
+<meta name="description"
+content="Stackly - Artificial Intelligence, Machine Learning, Automation and Digital Transformation Solutions">
+
+<!-- Google Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<!-- Font Awesome -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<!-- AOS -->
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+rel="stylesheet">
+
+<!-- Swiper -->
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<body>
+
+<!-- ==========================
+LOADER
+========================== -->
+
+<div class="loader">
+
+<div class="loader-glow"></div>
+
+<div class="loader-robot robot-1">
+<svg viewBox="0 0 100 100" fill="none">
+<rect x="25" y="30" width="50" height="40" rx="8" stroke="currentColor" stroke-width="2" fill="none"/>
+<circle cx="40" cy="48" r="4" fill="currentColor"/>
+<circle cx="60" cy="48" r="4" fill="currentColor"/>
+<rect x="40" y="58" width="20" height="4" rx="2" fill="currentColor"/>
+<rect x="15" y="55" width="10" height="25" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+<rect x="75" y="55" width="10" height="25" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+<rect x="42" y="70" width="16" height="20" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+<line x1="35" y1="22" x2="35" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<line x1="65" y1="22" x2="65" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<circle cx="35" cy="12" r="3" fill="currentColor"/>
+<circle cx="65" cy="12" r="3" fill="currentColor"/>
+<rect x="30" y="30" width="40" height="3" rx="1.5" fill="currentColor" opacity=".3"/>
+</svg>
+</div>
+<div class="loader-robot robot-2">
+<svg viewBox="0 0 100 100" fill="none">
+<circle cx="50" cy="35" r="18" stroke="currentColor" stroke-width="2" fill="none"/>
+<circle cx="43" cy="32" r="3" fill="currentColor"/>
+<circle cx="57" cy="32" r="3" fill="currentColor"/>
+<path d="M43 40 Q50 46 57 40" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+<rect x="30" y="50" width="40" height="35" rx="8" stroke="currentColor" stroke-width="2" fill="none"/>
+<rect x="20" y="58" width="12" height="20" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+<rect x="68" y="58" width="12" height="20" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+<rect x="44" y="85" width="12" height="12" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+<line x1="50" y1="12" x2="50" y2="5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<circle cx="50" cy="3" r="3" fill="currentColor"/>
+</svg>
+</div>
+<div class="loader-robot robot-3">
+<svg viewBox="0 0 100 100" fill="none">
+<rect x="20" y="25" width="60" height="45" rx="10" stroke="currentColor" stroke-width="2" fill="none"/>
+<circle cx="38" cy="45" r="5" fill="currentColor"/>
+<circle cx="62" cy="45" r="5" fill="currentColor"/>
+<path d="M38 57 Q50 63 62 57" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+<rect x="35" y="65" width="30" height="25" rx="5" stroke="currentColor" stroke-width="2" fill="none"/>
+<rect x="10" y="50" width="12" height="30" rx="5" stroke="currentColor" stroke-width="2" fill="none"/>
+<rect x="78" y="50" width="12" height="30" rx="5" stroke="currentColor" stroke-width="2" fill="none"/>
+<rect x="45" y="90" width="10" height="8" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+<rect x="30" y="18" width="8" height="10" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+<rect x="62" y="18" width="8" height="10" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+</svg>
+</div>
+<div class="loader-robot robot-4">
+<svg viewBox="0 0 100 100" fill="none">
+<rect x="28" y="32" width="44" height="35" rx="8" stroke="currentColor" stroke-width="2" fill="none"/>
+<ellipse cx="42" cy="47" rx="4" ry="5" fill="currentColor"/>
+<ellipse cx="58" cy="47" rx="4" ry="5" fill="currentColor"/>
+<rect x="38" y="55" width="24" height="4" rx="2" fill="currentColor"/>
+<rect x="16" y="55" width="12" height="28" rx="5" stroke="currentColor" stroke-width="2" fill="none"/>
+<rect x="72" y="55" width="12" height="28" rx="5" stroke="currentColor" stroke-width="2" fill="none"/>
+<circle cx="50" cy="62" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+<line x1="38" y1="22" x2="38" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<line x1="62" y1="22" x2="62" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<circle cx="38" cy="10" r="4" fill="currentColor"/>
+<circle cx="62" cy="10" r="4" fill="currentColor"/>
+<rect x="45" y="26" width="10" height="3" rx="1.5" fill="currentColor" opacity=".2"/>
+</svg>
+</div>
+
+<div class="loader-center">
+
+<div class="loader-ring"></div>
+<div class="loader-ring loader-ring-2"></div>
+<div class="loader-ring loader-ring-3"></div>
+
+<div class="loader-logo">
+
+<img src="logo.webp" alt="Stackly">
+
+</div>
+
+<div class="loader-dots">
+<span></span><span></span><span></span>
+</div>
+
+</div>
+
+<div class="loader-bar">
+
+<div class="loader-progress"></div>
+
+</div>
+
+</div>
+
+<!-- ==========================
+CUSTOM CURSOR
+========================== -->
+
+<div class="cursor"></div>
+
+<!-- ==========================
+PARTICLES
+========================== -->
+
+<div id="particles-js"></div>
+
+
+
+<!-- ==========================
+HEADER
+========================== -->
+
+<header>
+
+<div class="container">
+
+<div class="logo">
+
+<a href="index.html">
+<img src="logo.webp" alt="Stackly">
+</a>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="pricing.html">Pricing</a></li>
+
+<li><a href="blog.html">Blog</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<div class="header-btns">
+
+<a href="login.html"
+class="btn-outline">
+
+Login
+
+</a>
+
+<a href="signup.html"
+class="btn-primary">
+
+Start Free
+
+</a>
+
+</div>
+
+</nav>
+
+<div class="mobile-toggle">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ==========================
+HERO SECTION
+========================== -->
+
+<section class="hero">
+
+<video autoplay muted loop playsinline preload="auto">
+
+<source src="p1.mp4"
+type="video/mp4">
+
+</video>
+
+<div class="hero-overlay"></div>
+
+<div class="container hero-content">
+
+<div class="hero-left"
+data-aos="fade-right">
+
+<span class="tag">
+
+AI Powered Innovation
+
+</span>
+
+<h1>
+
+Transforming Businesses
+With Advanced
+Artificial Intelligence
+
+</h1>
+
+<p>
+
+Build smarter products,
+automate operations and
+unlock growth with our
+next-generation AI solutions.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="404.html"
+class="btn-primary">
+
+Explore Services
+
+</a>
+
+<a href="404.html"
+class="btn-outline">
+
+Live Demo
+
+</a>
+
+</div>
+
+<div class="hero-stats">
+
+<div>
+
+<h3>500+</h3>
+
+<p>Projects</p>
+
+</div>
+
+<div>
+
+<h3>120+</h3>
+
+<p>Experts</p>
+
+</div>
+
+<div>
+
+<h3>98%</h3>
+
+<p>Success Rate</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right"
+data-aos="fade-left">
+
+<img
+src="image/robot.webp"
+alt="AI Robot">
+
+<div class="floating-card card1">
+
+<i class="fas fa-brain"></i>
+
+AI Automation
+
+</div>
+
+<div class="floating-card card2">
+
+<i class="fas fa-chart-line"></i>
+
+Data Analytics
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+BRANDS
+========================== -->
+
+<section class="brands">
+
+<div class="container">
+
+<div class="brand-slider">
+
+<div>Google</div>
+<div>Microsoft</div>
+<div>Amazon</div>
+<div>NVIDIA</div>
+<div>OpenAI</div>
+<div>IBM</div>
+<div>Meta</div>
+<div>Oracle</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+ABOUT
+========================== -->
+
+<section class="about">
+
+<div class="container">
+
+<div class="about-image"
+data-aos="fade-right">
+
+<img src="image/AI.webp"
+alt="About AI">
+
+</div>
+
+<div class="about-content"
+data-aos="fade-left">
+
+<span class="section-tag">
+
+ABOUT US
+
+</span>
+
+<h2>
+
+Leading The Future
+Of Artificial Intelligence
+
+</h2>
+
+<p>
+
+We help organizations adopt AI,
+automation and machine learning
+to streamline operations,
+reduce costs and create
+exceptional customer experiences.
+
+</p>
+
+<div class="about-grid">
+
+<div>
+
+<h3>10+</h3>
+
+<p>Years Experience</p>
+
+</div>
+
+<div>
+
+<h3>50+</h3>
+
+<p>Countries Served</p>
+
+</div>
+
+<div>
+
+<h3>1000+</h3>
+
+<p>Clients</p>
+
+</div>
+
+<div>
+
+<h3>24/7</h3>
+
+<p>Support</p>
+
+</div>
+
+</div>
+
+<a href="about.html"
+class="btn-primary">
+
+Read More
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+SERVICES
+========================== -->
+
+<section class="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>SERVICES</span>
+
+<h2>
+
+AI Solutions We Provide
+
+</h2>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<i class="fas fa-robot"></i>
+
+<h3>Generative AI</h3>
+
+<p>
+
+Custom GPT,
+AI Agents,
+Content Automation
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-brain"></i>
+
+<h3>Machine Learning</h3>
+
+<p>
+
+Predictive Models,
+Forecasting,
+Optimization
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-comments"></i>
+
+<h3>NLP</h3>
+
+<p>
+
+Chatbots,
+Voice Assistants,
+Language Models
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-eye"></i>
+
+<h3>Computer Vision</h3>
+
+<p>
+
+Image Recognition,
+Object Detection,
+Video Analytics
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-chart-pie"></i>
+
+<h3>Data Analytics</h3>
+
+<p>
+
+Business Intelligence,
+Reporting,
+Insights
+
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fas fa-cogs"></i>
+
+<h3>Automation</h3>
+
+<p>
+
+Workflow Automation,
+RPA,
+AI Processes
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+WHY CHOOSE US
+========================== -->
+
+<section class="why-us">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>WHY CHOOSE US</span>
+
+            <h2>Why Businesses Trust Stackly</h2>
+
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure AI</h3>
+                <p>Enterprise-grade security with advanced encryption and compliance.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Fast Deployment</h3>
+                <p>Launch AI solutions quickly with our proven implementation process.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-users"></i>
+                <h3>Expert Team</h3>
+                <p>Work with certified AI engineers and solution architects.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-infinity"></i>
+                <h3>Scalable Systems</h3>
+                <p>Grow from startup to enterprise without limitations.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+AI SOLUTIONS
+========================== -->
+
+<section class="solutions">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>INDUSTRIES</span>
+
+            <h2>AI Solutions For Every Industry</h2>
+
+        </div>
+
+        <div class="solutions-grid">
+
+            <div class="solution-card">
+                <img src="image/health.webp" alt="">
+                <h3>Healthcare AI</h3>
+                <p>Diagnosis support, patient analytics and predictive healthcare.</p>
+            </div>
+
+            <div class="solution-card">
+                <img src="image/images 6.webp" alt="">
+                <h3>Finance AI</h3>
+                <p>Fraud detection, forecasting and smart financial automation.</p>
+            </div>
+
+            <div class="solution-card">
+                <img src="image/images_1.webp" alt="">
+                <h3>Retail AI</h3>
+                <p>Personalization, inventory optimization and customer insights.</p>
+            </div>
+
+            <div class="solution-card">
+                <img src="image/images_2.webp" alt="">
+                <h3>Education AI</h3>
+                <p>Adaptive learning and intelligent education platforms.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+AI DEMO
+========================== -->
+
+<section id="demo" class="ai-demo">
+
+    <div class="container">
+
+        <div class="demo-content">
+
+            <div class="demo-left">
+
+                <span>LIVE AI DEMO</span>
+
+                <h2>Experience AI In Action</h2>
+
+                <p>
+                    Interact with our AI assistant and discover how automation,
+                    intelligence and machine learning can transform your business.
+                </p>
+
+                <a href="404.html" class="btn-primary">
+                    Request Demo
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+COUNTERS
+========================== -->
+
+<section class="counter-section">
+
+    <div class="container">
+
+        <div class="counter-grid">
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="1000">0</h2>
+                <p>Projects Completed</p>
+            </div>
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="500">0</h2>
+                <p>Global Clients</p>
+            </div>
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="120">0</h2>
+                <p>AI Experts</p>
+            </div>
+
+            <div class="counter-box">
+                <h2 class="counter" data-target="98">0</h2>
+                <p>Success Rate %</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+CASE STUDIES
+========================== -->
+
+<section class="case-studies">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>CASE STUDIES</span>
+
+            <h2>Success Stories</h2>
+
+        </div>
+
+        <div class="case-grid">
+
+            <div class="case-card">
+
+                <img src="image/images_3.webp" alt="">
+
+                <div class="case-content">
+
+                    <h3>AI Customer Support</h3>
+
+                    <p>
+                        Reduced support costs by 60%
+                        using intelligent AI assistants.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="case-card">
+
+                <img src="image/images_4.webp" alt="">
+
+                <div class="case-content">
+
+                    <h3>Retail Automation</h3>
+
+                    <p>
+                        Increased customer engagement
+                        by 200% through AI recommendations.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="case-card">
+
+                <img src="image/im4.webp" alt="">
+
+                <div class="case-content">
+
+                    <h3>Financial Analytics</h3>
+
+                    <p>
+                        Improved forecasting accuracy
+                        using machine learning models.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+PRICING
+========================== -->
+
+<section class="pricing">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>PRICING</span>
+
+            <h2>Flexible Pricing Plans</h2>
+
+        </div>
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+
+                <h3>Starter</h3>
+
+                <div class="price">
+
+                    ₹999
+
+                    <span>/month</span>
+
+                </div>
+
+                <ul>
+
+                    <li>AI Chatbot</li>
+                    <li>Basic Analytics</li>
+                    <li>Email Support</li>
+                    <li>5 Projects</li>
+
+                </ul>
+
+                <a href="404.html" class="btn-primary">
+                    Choose Plan
+                </a>
+
+            </div>
+
+            <div class="price-card featured">
+
+                <div class="badge">
+                    Popular
+                </div>
+
+                <h3>Professional</h3>
+
+                <div class="price">
+
+                    ₹2999
+
+                    <span>/month</span>
+
+                </div>
+
+                <ul>
+
+                    <li>Advanced AI Tools</li>
+                    <li>Machine Learning</li>
+                    <li>Priority Support</li>
+                    <li>Unlimited Projects</li>
+
+                </ul>
+
+                <a href="404.html" class="btn-primary">
+                    Choose Plan
+                </a>
+
+            </div>
+
+            <div class="price-card">
+
+                <h3>Enterprise</h3>
+
+                <div class="price">
+
+                    Custom
+
+                </div>
+
+                <ul>
+
+                    <li>Custom AI Models</li>
+                    <li>Dedicated Team</li>
+                    <li>24/7 Support</li>
+                    <li>Enterprise Security</li>
+
+                </ul>
+
+                <a href="contact.html" class="btn-primary">
+                    Contact Sales
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+TEAM
+========================== -->
+
+<section class="team">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>OUR TEAM</span>
+
+            <h2>Meet AI Experts</h2>
+
+        </div>
+
+        <div class="team-grid">
+
+            <div class="team-card">
+
+                <img src="image/pic1.webp" alt="">
+
+                <h3>John Anderson</h3>
+
+                <p>AI Architect</p>
+
+                <div class="socials">
+
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+            <div class="team-card">
+
+                <img src="image/pic5.webp" alt="">
+
+                <h3>Sarah Wilson</h3>
+
+                <p>ML Engineer</p>
+
+                <div class="socials">
+
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+            <div class="team-card">
+
+                <img src="image/pic2.webp" alt="">
+
+                <h3>David Miller</h3>
+
+                <p>Data Scientist</p>
+
+                <div class="socials">
+
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+            <div class="team-card">
+
+                <img src="image/pic6.webp" alt="">
+
+                <h3>Emily Johnson</h3>
+
+                <p>AI Consultant</p>
+
+                <div class="socials">
+
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================
+TESTIMONIALS
+========================== -->
+
+<section class="testimonials">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>TESTIMONIALS</span>
+
+            <h2>What Our Clients Say</h2>
+
+        </div>
+
+        <div class="swiper testimonial-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+
+                    <div class="testimonial-card">
+
+                        <img src="image/pic3.webp" alt="">
+
+                        <p>
+                            Stackly transformed our business operations.
+                            Automation reduced costs and improved efficiency.
+                        </p>
+
+                        <h4>Michael Brown</h4>
+
+                        <span>CEO, TechCorp</span>
+
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide">
+
+                    <div class="testimonial-card">
+
+                        <img src="image/pic7.webp" alt="">
+
+                        <p>
+                            The AI chatbot solution increased customer engagement
+                            and boosted conversions dramatically.
+                        </p>
+
+                        <h4>Jessica Lee</h4>
+
+                        <span>Marketing Director</span>
+
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide">
+
+                    <div class="testimonial-card">
+
+                        <img src="image/pic4.webp" alt="">
+
+                        <p>
+                            Excellent AI consulting team with outstanding
+                            implementation support.
+                        </p>
+
+                        <h4>Daniel Smith</h4>
+
+                        <span>Operations Head</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+BLOG
+========================== -->
+
+<section class="blog">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>BLOG</span>
+
+            <h2>Latest AI Insights</h2>
+
+        </div>
+
+        <div class="blog-grid">
+
+            <article class="blog-card">
+
+                <img src="image/img2.webp" alt="">
+
+                <div class="blog-content">
+
+                    <span>Artificial Intelligence</span>
+
+                    <h3>
+                        Future Trends In Generative AI
+                    </h3>
+
+                    <a href="blog-details.html">
+                        Read More
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="blog-card">
+
+                <img src="image/img1.webp" alt="">
+
+                <div class="blog-content">
+
+                    <span>Machine Learning</span>
+
+                    <h3>
+                        How AI Is Reshaping Industries
+                    </h3>
+
+                    <a href="blog-details.html">
+                        Read More
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="blog-card">
+
+                <img src="image/img3.webp" alt="">
+
+                <div class="blog-content">
+
+                    <span>Automation</span>
+
+                    <h3>
+                        AI Automation Best Practices
+                    </h3>
+
+                    <a href="blog-details.html">
+                        Read More
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+FAQ
+========================== -->
+
+<section class="faq">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>FAQ</span>
+
+            <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    What AI services do you provide?
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        We provide Generative AI, Machine Learning,
+                        NLP, Computer Vision and AI Automation solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Can AI integrate with existing systems?
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. Our AI platforms integrate with ERP,
+                        CRM and enterprise systems seamlessly.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Do you offer enterprise solutions?
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. We provide scalable enterprise-grade AI
+                        solutions with dedicated support.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+CONTACT
+========================== -->
+
+<section class="contact">
+
+    <div class="container">
+
+        <div class="contact-wrapper">
+
+            <div class="contact-info">
+
+                <span>CONTACT US</span>
+
+                <h2>Let's Build The Future Together</h2>
+
+                <p>
+                    Ready to transform your business using AI?
+                    Get in touch with our experts today.
+                </p>
+
+                <div class="contact-details">
+
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        info@Stackly.com
+                    </div>
+
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        +91 98765 43210
+                    </div>
+
+                    <div>
+                        <i class="fas fa-location-dot"></i>
+                        Chennai, India
+                    </div>
+
+                </div>
+
+            </div>
+
+            <form class="contact-form"
+action="404.html">
+
+                <input
+                type="text"
+                placeholder="Your Name"
+                required>
+
+                <input
+                type="email"
+                placeholder="Email Address"
+                required>
+
+                <input
+                type="text"
+                placeholder="Subject">
+
+                <textarea
+                rows="5"
+                placeholder="Message"></textarea>
+
+                <button type="submit"
+                class="btn-primary">
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+NEWSLETTER
+========================== -->
+
+<section class="newsletter">
+
+    <div class="container">
+
+        <div class="newsletter-box">
+
+            <h2>
+                Subscribe For AI Updates
+            </h2>
+
+            <p>
+                Receive latest AI trends,
+                technology news and updates.
+            </p>
+
+            <form action="404.html">
+
+                <input
+                type="email"
+                placeholder="Enter Email Address">
+
+                <button
+                type="submit"
+                class="btn-primary">
+
+                    Subscribe
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+FOOTER
+========================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-logo">
+
+                    <a href="index.html">
+<img src="logo.webp" alt="Stackly">
+</a>
+
+                </div>
+
+                <p>
+
+                    Building intelligent solutions
+                    powered by Artificial Intelligence.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>Quick Links</h4>
+
+                <ul>
+
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>Services</h4>
+
+                <ul>
+
+                    <li><a href="#">Machine Learning</a></li>
+                    <li><a href="#">Generative AI</a></li>
+                    <li><a href="#">Automation</a></li>
+                    <li><a href="#">Consulting</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>Follow Us</h4>
+
+                <div class="social-links">
+
+                    <a href="404.html">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="404.html">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="404.html">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="404.html">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Stackly.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- ==========================
+FLOATING CHATBOT
+========================== -->
+
+<div class="chatbot-btn">
+
+    <i class="fas fa-comments"></i>
+
+</div>
+
+<!-- ==========================
+SCROLL TO TOP
+========================== -->
+
+<button id="scrollTop">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+<!-- ==========================
+SCRIPTS
+========================== -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/slider.js"></script>
+<script src="assets/js/chatbot.js"></script>
+<script src="assets/js/animations.js"></script>
+
+<script>
+
+AOS.init({
+    duration:1000,
+    once:true
+});
+
+</script>
+
+</body>
+</html>

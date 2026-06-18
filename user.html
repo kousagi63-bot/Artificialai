@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>User Dashboard | Stackly</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+.dashboard-content{
+max-width:100vw;
+overflow-x:hidden;
+}
+@media (max-width:768px){
+.dash-section [style*="grid-template-columns: 1fr 2fr"],
+.dash-section [style*="grid-template-columns:1fr 2fr"],
+.dash-section [style*="grid-template-columns: 1fr 1fr"],
+.dash-section [style*="grid-template-columns:1fr 1fr"]{
+grid-template-columns:1fr !important;
+}
+.dash-section [style*="minmax("]{
+grid-template-columns:1fr !important;
+}
+.section-title{
+font-size:20px !important;
+margin-bottom:14px !important;
+}
+.dashboard-title{
+font-size:20px !important;
+}
+.dashboard-content{
+padding:14px 10px !important;
+}
+.dashboard-header{
+flex-direction:column !important;
+align-items:flex-start !important;
+gap:10px !important;
+padding:14px 16px !important;
+margin-bottom:20px !important;
+}
+.user-profile{
+margin-left:0 !important;
+}
+.dashboard-cards{
+grid-template-columns:1fr 1fr !important;
+gap:10px !important;
+}
+.stat-card{
+padding:14px 10px !important;
+}
+.stat-card h3{
+font-size:20px !important;
+}
+.glass[style*="padding"]{
+padding:14px !important;
+border-radius:16px !important;
+}
+[style*="height:220px"]{
+height:120px !important;
+}
+[style*="margin:40px 0"]{
+margin:14px 0 !important;
+}
+[style*="font-size:28px"]{
+font-size:18px !important;
+}
+[style*="font-size:32px"]{
+font-size:20px !important;
+}
+[style*="display:flex"][style*="height:150px"]{
+height:80px !important;
+gap:4px !important;
+padding:6px 0 !important;
+}
+[style*="display:flex"][style*="height:150px"] ~ [style*="display:flex"]{
+gap:4px !important;
+}
+[style*="padding:30px"][style*="margin-top"]{
+padding:14px !important;
+margin-top:16px !important;
+}
+img[style*="width:120px"][style*="height:120px"]{
+width:80px !important;
+height:80px !important;
+}
+}
+@media (max-width:576px){
+.dashboard-cards{
+gap:8px !important;
+}
+.stat-card{
+padding:12px 8px !important;
+}
+.stat-card h3{
+font-size:18px !important;
+}
+.stat-card p{
+font-size:11px !important;
+}
+.glass[style*="padding"]{
+padding:12px !important;
+border-radius:14px !important;
+}
+[style*="height:220px"]{
+height:100px !important;
+}
+[style*="font-size:28px"]{
+font-size:16px !important;
+}
+[style*="font-size:32px"]{
+font-size:18px !important;
+}
+[style*="display:flex"][style*="height:150px"]{
+height:70px !important;
+gap:3px !important;
+}
+.dash-section{
+padding:0 !important;
+}
+img[style*="width:120px"][style*="height:120px"]{
+width:70px !important;
+height:70px !important;
+}
+.history-item{
+flex-wrap:wrap !important;
+}
+}
+@media (max-width:400px){
+.dashboard-content{
+padding:10px 6px !important;
+}
+.dashboard-cards{
+grid-template-columns:1fr 1fr !important;
+gap:6px !important;
+}
+.stat-card{
+padding:10px 6px !important;
+}
+.glass[style*="padding"]{
+padding:10px !important;
+border-radius:12px !important;
+}
+}
+</style>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================
+    SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <a href="login.html">Stackly</a>
+
+        </div>
+
+        <div class="sidebar-menu">
+
+            <a href="#dashboard" class="active">
+                <i class="fas fa-th-large"></i>
+                Overview
+            </a>
+
+            <a href="#my-tools">
+                <i class="fas fa-robot"></i>
+                My Tools
+            </a>
+
+            <a href="#my-projects">
+                <i class="fas fa-folder"></i>
+                My Projects
+            </a>
+
+            <a href="#usage">
+                <i class="fas fa-chart-line"></i>
+                Usage
+            </a>
+
+            <a href="#history">
+                <i class="fas fa-history"></i>
+                History
+            </a>
+
+            <a href="#billing">
+                <i class="fas fa-credit-card"></i>
+                Billing
+            </a>
+
+            <a href="#profile">
+                <i class="fas fa-user"></i>
+                Profile
+            </a>
+
+            <a href="#settings">
+                <i class="fas fa-cog"></i>
+                Settings
+            </a>
+
+            <a href="login.html">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ==========================
+    CONTENT
+    ========================== -->
+
+    <main class="dashboard-content">
+
+        <!-- ==========================
+        DASHBOARD SECTION
+        ========================== -->
+
+        <section id="dashboard" class="dash-section">
+
+            <div class="dashboard-header">
+
+                <div>
+
+                    <h1 class="dashboard-title">
+                        User Dashboard 👤
+                    </h1>
+
+                    <p style="color:#7a9a8a;">
+                        Manage your projects and AI tools.
+                    </p>
+
+                </div>
+
+                <div class="user-profile">
+
+                    <img
+                    src="https://i.pravatar.cc/150?img=32"
+                    alt="User">
+
+                    <div>
+
+                        <h4 style="color:#fff;">
+                            John Doe
+                        </h4>
+
+                        <small style="color:#7a9a8a;">
+                            Free Plan
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-cards">
+
+                <div class="stat-card">
+                    <h3>1,250</h3>
+                    <p>Total AI Requests</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>320</h3>
+                    <p>Active Projects</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>98%</h3>
+                    <p>Success Rate</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>540</h3>
+                    <p>Clients Served</p>
+                </div>
+
+            </div>
+
+            <div class="glass" style="padding:30px;margin-top:35px;border-radius:25px;">
+                <h2 style="color:#fff;margin-bottom:20px;">Performance Overview</h2>
+                <canvas id="analyticsChart" height="120"></canvas>
+            </div>
+
+        </section>
+
+        <!-- ==========================
+        AI VIDEO BANNER
+        ========================== -->
+
+        <div style="position:relative;border-radius:25px;overflow:hidden;margin:40px 0;height:220px;">
+
+            <video autoplay muted loop playsinline preload="auto"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+
+            <source src="assets/videos/dashboard-ai.mp4"
+            type="video/mp4">
+
+            </video>
+
+            <div style="position:absolute;inset:0;background:rgba(0,0,0,.65);z-index:1;"></div>
+
+            <div style="position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;">
+
+                <h2 style="color:#fff;font-size:28px;margin-bottom:8px;">
+                    AI-Powered Dashboard
+                </h2>
+
+                <p style="color:#d1e4d7;font-size:15px;max-width:500px;">
+                    Monitor, analyze and deploy AI solutions in real-time from your centralized command center.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ==========================
+        AI TOOLS SECTION
+        ========================== -->
+
+        <section id="my-tools" class="dash-section">
+
+            <h2 class="section-title" style="color:#fff;font-size:32px;margin-bottom:30px;">
+                <i class="fas fa-robot" style="color:var(--secondary);margin-right:12px;"></i>
+                My Tools
+            </h2>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;">
+
+                <div class="glass tool-card" style="padding:25px;border-radius:20px;">
+                    <i class="fas fa-comment-dots" style="font-size:36px;color:#14b8a6;margin-bottom:15px;"></i>
+                    <h3 style="color:#fff;font-size:20px;margin-bottom:10px;">AI Chatbot</h3>
+                    <p style="color:#7a9a8a;font-size:14px;">Intelligent conversational assistant for customer support and lead generation.</p>
+                    <span style="display:inline-block;margin-top:15px;padding:6px 14px;background:rgba(20,184,166,.15);color:#14b8a6;border-radius:20px;font-size:12px;">Active</span>
+                </div>
+
+                <div class="glass tool-card" style="padding:25px;border-radius:20px;">
+                    <i class="fas fa-brain" style="font-size:36px;color:#0ea5e9;margin-bottom:15px;"></i>
+                    <h3 style="color:#fff;font-size:20px;margin-bottom:10px;">ML Predictor</h3>
+                    <p style="color:#7a9a8a;font-size:14px;">Machine learning models for predictive analytics and trend forecasting.</p>
+                    <span style="display:inline-block;margin-top:15px;padding:6px 14px;background:rgba(14,165,233,.15);color:#0ea5e9;border-radius:20px;font-size:12px;">Active</span>
+                </div>
+
+                <div class="glass tool-card" style="padding:25px;border-radius:20px;">
+                    <i class="fas fa-file-alt" style="font-size:36px;color:#f59e0b;margin-bottom:15px;"></i>
+                    <h3 style="color:#fff;font-size:20px;margin-bottom:10px;">Content Generator</h3>
+                    <p style="color:#7a9a8a;font-size:14px;">AI-powered content creation for blogs, emails, and social media posts.</p>
+                    <span style="display:inline-block;margin-top:15px;padding:6px 14px;background:rgba(245,158,11,.15);color:#f59e0b;border-radius:20px;font-size:12px;">Active</span>
+                </div>
+
+                <div class="glass tool-card" style="padding:25px;border-radius:20px;">
+                    <i class="fas fa-eye" style="font-size:36px;color:#8b5cf6;margin-bottom:15px;"></i>
+                    <h3 style="color:#fff;font-size:20px;margin-bottom:10px;">Vision AI</h3>
+                    <p style="color:#7a9a8a;font-size:14px;">Computer vision and image recognition for automated visual analysis.</p>
+                    <span style="display:inline-block;margin-top:15px;padding:6px 14px;background:rgba(139,92,246,.15);color:#8b5cf6;border-radius:20px;font-size:12px;">Beta</span>
+                </div>
+
+                <div class="glass tool-card" style="padding:25px;border-radius:20px;">
+                    <i class="fas fa-microphone" style="font-size:36px;color:#ec4899;margin-bottom:15px;"></i>
+                    <h3 style="color:#fff;font-size:20px;margin-bottom:10px;">Speech AI</h3>
+                    <p style="color:#7a9a8a;font-size:14px;">Speech-to-text and text-to-speech conversion with natural voices.</p>
+                    <span style="display:inline-block;margin-top:15px;padding:6px 14px;background:rgba(236,72,153,.15);color:#ec4899;border-radius:20px;font-size:12px;">Active</span>
+                </div>
+
+                <div class="glass tool-card" style="padding:25px;border-radius:20px;">
+                    <i class="fas fa-chart-bar" style="font-size:36px;color:#14b8a6;margin-bottom:15px;"></i>
+                    <h3 style="color:#fff;font-size:20px;margin-bottom:10px;">Analytics AI</h3>
+                    <p style="color:#7a9a8a;font-size:14px;">Automated data analysis and business intelligence reporting.</p>
+                    <span style="display:inline-block;margin-top:15px;padding:6px 14px;background:rgba(20,184,166,.15);color:#14b8a6;border-radius:20px;font-size:12px;">Active</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+        PROJECTS SECTION
+        ========================== -->
+
+        <section id="my-projects" class="dash-section">
+
+            <h2 class="section-title" style="color:#fff;font-size:32px;margin-bottom:30px;">
+                <i class="fas fa-folder" style="color:var(--secondary);margin-right:12px;"></i>
+                My Projects
+            </h2>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;">
+
+                <div class="glass" style="padding:25px;border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;">
+                        <h3 style="color:#fff;font-size:18px;">AI Chatbot Platform</h3>
+                        <span style="padding:4px 12px;background:rgba(20,184,166,.15);color:#14b8a6;border-radius:15px;font-size:12px;">Active</span>
+                    </div>
+                    <div style="height:8px;background:rgba(255,255,255,.1);border-radius:10px;overflow:hidden;margin-bottom:10px;">
+                        <div style="width:85%;height:100%;background:linear-gradient(90deg,#14b8a6,#0ea5e9);border-radius:10px;"></div>
+                    </div>
+                    <p style="color:#7a9a8a;font-size:14px;">85% complete • Due Dec 2026 • 4 team members</p>
+                </div>
+
+                <div class="glass" style="padding:25px;border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;">
+                        <h3 style="color:#fff;font-size:18px;">ML Prediction Model</h3>
+                        <span style="padding:4px 12px;background:rgba(245,158,11,.15);color:#f59e0b;border-radius:15px;font-size:12px;">Running</span>
+                    </div>
+                    <div style="height:8px;background:rgba(255,255,255,.1);border-radius:10px;overflow:hidden;margin-bottom:10px;">
+                        <div style="width:70%;height:100%;background:linear-gradient(90deg,#f59e0b,#ef4444);border-radius:10px;"></div>
+                    </div>
+                    <p style="color:#7a9a8a;font-size:14px;">70% complete • Due Mar 2027 • 3 team members</p>
+                </div>
+
+                <div class="glass" style="padding:25px;border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;">
+                        <h3 style="color:#fff;font-size:18px;">Automation Workflow</h3>
+                        <span style="padding:4px 12px;background:rgba(5,150,105,.15);color:#059669;border-radius:15px;font-size:12px;">Completed</span>
+                    </div>
+                    <div style="height:8px;background:rgba(255,255,255,.1);border-radius:10px;overflow:hidden;margin-bottom:10px;">
+                        <div style="width:100%;height:100%;background:linear-gradient(90deg,#059669,#14b8a6);border-radius:10px;"></div>
+                    </div>
+                    <p style="color:#7a9a8a;font-size:14px;">100% complete • Completed Nov 2026 • 2 team members</p>
+                </div>
+
+                <div class="glass" style="padding:25px;border-radius:20px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;">
+                        <h3 style="color:#fff;font-size:18px;">Data Pipeline</h3>
+                        <span style="padding:4px 12px;background:rgba(14,165,233,.15);color:#0ea5e9;border-radius:15px;font-size:12px;">In Progress</span>
+                    </div>
+                    <div style="height:8px;background:rgba(255,255,255,.1);border-radius:10px;overflow:hidden;margin-bottom:10px;">
+                        <div style="width:45%;height:100%;background:linear-gradient(90deg,#0ea5e9,#8b5cf6);border-radius:10px;"></div>
+                    </div>
+                    <p style="color:#7a9a8a;font-size:14px;">45% complete • Due Aug 2027 • 5 team members</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+        ANALYTICS SECTION
+        ========================== -->
+
+        <section id="analytics" class="dash-section">
+
+            <h2 class="section-title" style="color:#fff;font-size:32px;margin-bottom:30px;">
+                <i class="fas fa-chart-line" style="color:var(--secondary);margin-right:12px;"></i>
+                Analytics
+            </h2>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;margin-bottom:30px;">
+
+                <div class="glass" style="padding:20px;border-radius:20px;text-align:center;">
+                    <h3 style="color:#14b8a6;font-size:36px;margin-bottom:5px;">12.5K</h3>
+                    <p style="color:#7a9a8a;font-size:14px;">Total API Calls</p>
+                    <small style="color:#059669;">↑ 23.5% from last month</small>
+                </div>
+
+                <div class="glass" style="padding:20px;border-radius:20px;text-align:center;">
+                    <h3 style="color:#0ea5e9;font-size:36px;margin-bottom:5px;">98.2%</h3>
+                    <p style="color:#7a9a8a;font-size:14px;">Uptime</p>
+                    <small style="color:#059669;">↑ 2.1% from last month</small>
+                </div>
+
+                <div class="glass" style="padding:20px;border-radius:20px;text-align:center;">
+                    <h3 style="color:#f59e0b;font-size:36px;margin-bottom:5px;">2.4s</h3>
+                    <p style="color:#7a9a8a;font-size:14px;">Avg Response Time</p>
+                    <small style="color:#059669;">↓ 0.8s from last month</small>
+                </div>
+
+                <div class="glass" style="padding:20px;border-radius:20px;text-align:center;">
+                    <h3 style="color:#8b5cf6;font-size:36px;margin-bottom:5px;">4.9★</h3>
+                    <p style="color:#7a9a8a;font-size:14px;">User Rating</p>
+                    <small style="color:#059669;">↑ 0.3 from last month</small>
+                </div>
+
+            </div>
+
+            <div class="glass" style="padding:25px;border-radius:20px;">
+                <h3 style="color:#fff;font-size:20px;margin-bottom:15px;">Monthly Usage</h3>
+                <div style="display:flex;align-items:end;gap:10px;height:150px;padding:10px 0;">
+                    <div style="flex:1;height:60%;background:linear-gradient(180deg,#14b8a6,transparent);border-radius:6px 6px 0 0;transition:height .3s;" onmouseover="this.style.height='65%'" onmouseout="this.style.height='60%'"></div>
+                    <div style="flex:1;height:75%;background:linear-gradient(180deg,#0ea5e9,transparent);border-radius:6px 6px 0 0;transition:height .3s;" onmouseover="this.style.height='80%'" onmouseout="this.style.height='75%'"></div>
+                    <div style="flex:1;height:45%;background:linear-gradient(180deg,#f59e0b,transparent);border-radius:6px 6px 0 0;transition:height .3s;" onmouseover="this.style.height='50%'" onmouseout="this.style.height='45%'"></div>
+                    <div style="flex:1;height:90%;background:linear-gradient(180deg,#14b8a6,transparent);border-radius:6px 6px 0 0;transition:height .3s;" onmouseover="this.style.height='95%'" onmouseout="this.style.height='90%'"></div>
+                    <div style="flex:1;height:55%;background:linear-gradient(180deg,#8b5cf6,transparent);border-radius:6px 6px 0 0;transition:height .3s;" onmouseover="this.style.height='60%'" onmouseout="this.style.height='55%'"></div>
+                    <div style="flex:1;height:80%;background:linear-gradient(180deg,#14b8a6,transparent);border-radius:6px 6px 0 0;transition:height .3s;" onmouseover="this.style.height='85%'" onmouseout="this.style.height='80%'"></div>
+                </div>
+                <div style="display:flex;gap:10px;margin-top:5px;">
+                    <span style="flex:1;text-align:center;color:#7a9a8a;font-size:12px;">Mon</span>
+                    <span style="flex:1;text-align:center;color:#7a9a8a;font-size:12px;">Tue</span>
+                    <span style="flex:1;text-align:center;color:#7a9a8a;font-size:12px;">Wed</span>
+                    <span style="flex:1;text-align:center;color:#7a9a8a;font-size:12px;">Thu</span>
+                    <span style="flex:1;text-align:center;color:#7a9a8a;font-size:12px;">Fri</span>
+                    <span style="flex:1;text-align:center;color:#7a9a8a;font-size:12px;">Sat</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ==========================
+        MESSAGES SECTION
+        ========================== -->
+
+        <section id="history" class="dash-section">
+
+            <h2 class="section-title" style="color:#fff;font-size:32px;margin-bottom:30px;">
+                <i class="fas fa-history" style="color:var(--secondary);margin-right:12px;"></i>
+                History
+            </h2>
+
+            <div class="glass" style="padding:25px;border-radius:20px;">
+
+                <div style="display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.05);">
+                    <span style="width:40px;height:40px;border-radius:50%;background:rgba(20,184,166,.15);display:flex;align-items:center;justify-content:center;color:#14b8a6;font-size:16px;"><i class="fas fa-robot"></i></span>
+                    <div style="flex:1;">
+                        <h4 style="color:#fff;font-size:15px;">AI Chatbot API Call</h4>
+                        <p style="color:#7a9a8a;font-size:13px;">Used GPT-4 model • 1,250 tokens consumed</p>
+                    </div>
+                    <small style="color:#7a9a8a;">2m ago</small>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.05);">
+                    <span style="width:40px;height:40px;border-radius:50%;background:rgba(14,165,233,.15);display:flex;align-items:center;justify-content:center;color:#0ea5e9;font-size:16px;"><i class="fas fa-image"></i></span>
+                    <div style="flex:1;">
+                        <h4 style="color:#fff;font-size:15px;">Image Generation</h4>
+                        <p style="color:#7a9a8a;font-size:13px;">DALL-E 3 • 4 images generated</p>
+                    </div>
+                    <small style="color:#7a9a8a;">1h ago</small>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.05);">
+                    <span style="width:40px;height:40px;border-radius:50%;background:rgba(245,158,11,.15);display:flex;align-items:center;justify-content:center;color:#f59e0b;font-size:16px;"><i class="fas fa-file-alt"></i></span>
+                    <div style="flex:1;">
+                        <h4 style="color:#fff;font-size:15px;">Content Generation</h4>
+                        <p style="color:#7a9a8a;font-size:13px;">Blog post generated • 850 words</p>
+                    </div>
+                    <small style="color:#7a9a8a;">3h ago</small>
+                </div>
+
+                <div style="display:flex;align-items:center;gap:15px;padding:15px 0;">
+                    <span style="width:40px;height:40px;border-radius:50%;background:rgba(139,92,246,.15);display:flex;align-items:center;justify-content:center;color:#8b5cf6;font-size:16px;"><i class="fas fa-microphone"></i></span>
+                    <div style="flex:1;">
+                        <h4 style="color:#fff;font-size:15px;">Speech-to-Text</h4>
+                        <p style="color:#7a9a8a;font-size:13px;">Transcribed 5min audio file</p>
+                    </div>
+                    <small style="color:#7a9a8a;">5h ago</small>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+        NOTIFICATIONS SECTION
+        ========================== -->
+
+        <section id="usage" class="dash-section">
+
+            <h2 class="section-title" style="color:#fff;font-size:32px;margin-bottom:30px;">
+                <i class="fas fa-chart-line" style="color:var(--secondary);margin-right:12px;"></i>
+                Usage
+            </h2>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;">
+
+                <div class="glass" style="padding:25px;border-radius:20px;text-align:center;">
+                    <i class="fas fa-comment-dots" style="font-size:32px;color:#14b8a6;margin-bottom:10px;"></i>
+                    <h3 style="color:#fff;font-size:28px;margin-bottom:5px;">8,450</h3>
+                    <p style="color:#7a9a8a;">API Calls Used</p>
+                    <small style="color:#059669;">45% of monthly limit</small>
+                    <div style="margin-top:15px;height:6px;background:rgba(255,255,255,.1);border-radius:10px;overflow:hidden;">
+                        <div style="width:45%;height:100%;background:linear-gradient(90deg,#14b8a6,#0ea5e9);border-radius:10px;"></div>
+                    </div>
+                </div>
+
+                <div class="glass" style="padding:25px;border-radius:20px;text-align:center;">
+                    <i class="fas fa-database" style="font-size:32px;color:#0ea5e9;margin-bottom:10px;"></i>
+                    <h3 style="color:#fff;font-size:28px;margin-bottom:5px;">2.4 GB</h3>
+                    <p style="color:#7a9a8a;">Storage Used</p>
+                    <small style="color:#059669;">32% of 10 GB limit</small>
+                    <div style="margin-top:15px;height:6px;background:rgba(255,255,255,.1);border-radius:10px;overflow:hidden;">
+                        <div style="width:32%;height:100%;background:linear-gradient(90deg,#0ea5e9,#8b5cf6);border-radius:10px;"></div>
+                    </div>
+                </div>
+
+                <div class="glass" style="padding:25px;border-radius:20px;text-align:center;">
+                    <i class="fas fa-clock" style="font-size:32px;color:#f59e0b;margin-bottom:10px;"></i>
+                    <h3 style="color:#fff;font-size:28px;margin-bottom:5px;">128h</h3>
+                    <p style="color:#7a9a8a;">Compute Time</p>
+                    <small style="color:#059669;">55% of 240h limit</small>
+                    <div style="margin-top:15px;height:6px;background:rgba(255,255,255,.1);border-radius:10px;overflow:hidden;">
+                        <div style="width:55%;height:100%;background:linear-gradient(90deg,#f59e0b,#ec4899);border-radius:10px;"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+        PROFILE SECTION
+        ========================== -->
+
+        <section id="profile" class="dash-section">
+
+            <h2 class="section-title" style="color:#fff;font-size:32px;margin-bottom:30px;">
+                <i class="fas fa-user" style="color:var(--secondary);margin-right:12px;"></i>
+                Profile
+            </h2>
+
+            <div style="display:grid;grid-template-columns:1fr 2fr;gap:25px;">
+
+                <div class="glass" style="padding:30px;border-radius:20px;text-align:center;">
+                    <img src="https://i.pravatar.cc/150?img=32" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--secondary);margin-bottom:15px;">
+                    <h3 style="color:#fff;font-size:22px;">John Doe</h3>
+                    <p style="color:#7a9a8a;font-size:14px;">Free Plan</p>
+                    <div style="margin-top:20px;padding:15px;background:rgba(5,150,105,.1);border-radius:15px;">
+                        <p style="color:#14b8a6;font-size:13px;">Account Status</p>
+                        <p style="color:#fff;font-size:16px;font-weight:600;">Active ✓</p>
+                    </div>
+                </div>
+
+                <div class="glass" style="padding:30px;border-radius:20px;">
+                    <h3 style="color:#fff;font-size:20px;margin-bottom:20px;">Account Details</h3>
+                    <div style="display:grid;gap:15px;">
+                        <div><label style="color:#7a9a8a;font-size:13px;">Full Name</label><p style="color:#fff;font-size:16px;">John Doe</p></div>
+                        <div><label style="color:#7a9a8a;font-size:13px;">Email</label><p style="color:#fff;font-size:16px;">user@stackly.com</p></div>
+                        <div><label style="color:#7a9a8a;font-size:13px;">Phone</label><p style="color:#fff;font-size:16px;">+1 (555) 987-6543</p></div>
+                        <div><label style="color:#7a9a8a;font-size:13px;">Plan</label><p style="color:#fff;font-size:16px;">Free - Basic</p></div>
+                        <div><label style="color:#7a9a8a;font-size:13px;">Member Since</label><p style="color:#fff;font-size:16px;">March 2026</p></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+        BILLING SECTION
+        ========================== -->
+
+        <section id="billing" class="dash-section">
+
+            <h2 class="section-title" style="color:#fff;font-size:32px;margin-bottom:30px;">
+                <i class="fas fa-credit-card" style="color:var(--secondary);margin-right:12px;"></i>
+                Billing
+            </h2>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;">
+
+                <div class="glass" style="padding:25px;border-radius:20px;">
+                    <h3 style="color:#fff;font-size:18px;margin-bottom:20px;">Current Plan</h3>
+                    <div style="padding:20px;background:rgba(5,150,105,.1);border-radius:15px;margin-bottom:15px;text-align:center;">
+                        <p style="color:#14b8a6;font-size:13px;">Free Plan</p>
+                        <p style="color:#fff;font-size:32px;font-weight:700;">$0</p>
+                        <p style="color:#7a9a8a;font-size:13px;">/month • Basic features included</p>
+                    </div>
+                    <div style="display:grid;gap:10px;">
+                        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);">
+                            <span style="color:#d1e4d7;">API Calls</span>
+                            <span style="color:#7a9a8a;">1,000 / month</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);">
+                            <span style="color:#d1e4d7;">Storage</span>
+                            <span style="color:#7a9a8a;">1 GB</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;padding:8px 0;">
+                            <span style="color:#d1e4d7;">Team Members</span>
+                            <span style="color:#7a9a8a;">1</span>
+                        </div>
+                    </div>
+                    <button style="width:100%;margin-top:20px;padding:12px;background:var(--secondary);color:#fff;border:none;border-radius:12px;cursor:pointer;font-weight:600;">Upgrade Plan</button>
+                </div>
+
+                <div class="glass" style="padding:25px;border-radius:20px;">
+                    <h3 style="color:#fff;font-size:18px;margin-bottom:20px;">Payment History</h3>
+                    <div style="padding:15px;background:rgba(255,255,255,.03);border-radius:12px;text-align:center;margin-bottom:15px;">
+                        <p style="color:#7a9a8a;font-size:14px;">No payment history yet</p>
+                        <p style="color:#7a9a8a;font-size:12px;">Free plan does not require payment</p>
+                    </div>
+                    <div style="padding:15px;background:rgba(255,255,255,.03);border-radius:12px;text-align:center;">
+                        <i class="fas fa-credit-card" style="font-size:28px;color:#7a9a8a;margin-bottom:8px;"></i>
+                        <p style="color:#7a9a8a;font-size:13px;">No saved payment methods</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+const ctx =
+document.getElementById("analyticsChart");
+
+new Chart(ctx, {
+
+    type:"line",
+
+    data:{
+
+        labels:[
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun"
+        ],
+
+        datasets:[{
+
+            label:"AI Requests",
+
+            data:[
+            120,
+            190,
+            300,
+            250,
+            420,
+            520
+            ],
+
+borderColor:"#14b8a6",
+
+backgroundColor:
+"rgba(20,184,166,.15)",
+
+            tension:.4,
+
+            fill:true
+
+        }]
+
+    },
+
+    options:{
+
+        responsive:true,
+
+        plugins:{
+
+            legend:{
+
+                labels:{
+                    color:"#ffffff"
+                }
+
+            }
+
+        },
+
+        scales:{
+
+            x:{
+                ticks:{
+                    color:"#ffffff"
+                }
+            },
+
+            y:{
+                ticks:{
+                    color:"#ffffff"
+                }
+            }
+
+        }
+
+    }
+
+});
+
+// SIDEBAR ACTIVE LINK
+document.querySelectorAll(".sidebar-menu a").forEach(function(link){
+link.addEventListener("click",function(){
+document.querySelectorAll(".sidebar-menu a").forEach(function(l){l.classList.remove("active")});
+this.classList.add("active");
+});
+});
+
+</script>
+
+</body>
+</html>
